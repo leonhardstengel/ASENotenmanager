@@ -41,7 +41,7 @@ Um den Notenschnitt wirklich akkurat berechnen zu können, fügen Nutzer zu jede
 Aus diesen Parametern lassen sich dann die Noten berechnen.
 
 ### Wie startet man die Applikation?
-Mit git clone https://github.com/leonhardstengel/ASENotenmanager.git das Repository lokal speichern. JAVA muss auf dem lokalen Computer installiert sein.
+Mit git clone https://github.com/leonhardstengel/ASENotenmanager.git das Repository lokal speichern. JAVA muss auf dem lokalen Computer installiert sein. Mit dem Command java -jar out/artifacts/0_cleanproject_plugin_database_jar/0-cleanproject-plugin-database.jar wird das Programm gestartet.
 ### Wie testet man die Applikation?
 Mit git clone https://github.com/leonhardstengel/ASENotenmanager.git das Repository lokal speichern. JAVA und Maven müssen auf dem lokalen Computer installiert sein. Mit dem Command mvn test werden dann alle Tests ausgeführt.
 
@@ -49,13 +49,7 @@ Mit git clone https://github.com/leonhardstengel/ASENotenmanager.git das Reposit
 
 ### Was ist Clean Architecture?
 
-Beim Ansatz der Clean Architecture geht es im Kern darum, ein Softwareprojekt
-in mehrere Schichten zu unterteilen und so beispielsweise Applikationslogik von
-Domain-Klassen zu trennen. Dies kann mit den Schichten einer Zwiebel verglichen
-werden und ermöglicht es, schnell und ohne viel Aufwand Abhängigkeiten wie zum
-Beispiel die Datenbank auszutauschen. Zusätzlich soll jede Komponente nur über
-die für sie relevanten Sachverhalte Bescheid wissen und es soll eine
-Tätigkeitskapselung entstehen.
+Clean Architecture hat zum Ziel in einem Softwareprodukt eine langfristige und nachhaltige Architektur zu etablieren. Die Architektur ist dabei Schichtenartik (vgl. Zwiebel) aufgebaut. Im Kern sind langlebige Elemente (bspw. Business Logik), die sich quasi nie oder selten ändern. Darauf aufbauend gibt es weitere Schichten. Je tiefer, desto langlebiger ist der Code. Wichtig dabei ist, dass Abhängigkeiten stets von außen nach innen existieren. Die innere Schicht ist also nicht durch Änderungen in äußeren Schichten beeinflussbar und ist unabhängig. Nur die äußeren Schichten greifen auf die inneren Schichten zu. 
 
 ### Analyse der Dependency Rule
 
@@ -161,11 +155,11 @@ Um die Kohäsion in der Klasse hoch zu halten, werden die Eigenheiten vom Namen,
 ### Don't Repeat Yourself (DRY)
 Sowohl in LectureRepository, als auch in ExamRepository wurde in den getAll Methoden die entsprechende CSV Datei eingelesen, die erste Headerzeile entfernt und dann die einzelnen Zeileneinträge weitergegeben. Dieser Codeabschnitt war in beiden Fällen identisch, wesshalb er in eine CSVHelper Klasse ausgelagert wurde.
 
-![img.png](img.png)
+![img.png](img/img_15.png)
 
 Jetzt müssen Methoden zum Weiterverarbeiten von den CSV Dateien nur noch diese eine Methode aufrufen und erhalten die relevanten Zeilen.
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_16.png)
 
 Wenn sich an der CSV Datei oder am Einlesevorgang etwas ändert, kann dies nun an einer zentralen Stelle umgesetzt werden.
 
@@ -227,7 +221,7 @@ Nicht Professional hingegen sind die Variablenbezeichnungen in der BeforeEach de
 
 ### Code Coverage
 Die Code Coverage wurde mittels JUint ermittelt. Die Testergebnisse wurden im report Directory gespeichert.
-![img_2.png](img_2.png)
+![img_2.png](img/img_27.png)
 
 ### Fakes und Mocks
 
@@ -286,7 +280,7 @@ Aggregates sind in diesem Projekt nicht notwendig oder sinnvoll.
 
 Die Verwendung von isEmpty statt size kommt mit einer besseren Lesbarkeit und einer höheren Performance daher.
 
-![img_5.png](img_5.png)
+![img_5.png](img/img_50.png)
 
 [Link zu Commit](https://github.com/leonhardstengel/ASENotenmanager/commit/48bc06f87b21c8c809394771eafe69c25d8c6639)
 
@@ -294,7 +288,7 @@ Die Verwendung von isEmpty statt size kommt mit einer besseren Lesbarkeit und ei
 
 Zu Beginn des Projekts ist eine Klasse entstanden, die nie Implementiert oder Verwendet wurde. Entsprechend handelt es sich hierbei um Dead Code.
 
-![img_4.png](img_4.png)
+![img_4.png](img/img_49.png)
 
 [Link zu Commit](https://github.com/leonhardstengel/ASENotenmanager/commit/64ac5f47001482459d9855973973296030a880b9)
 
@@ -321,4 +315,4 @@ Der CSVHandler wurde als Singleton implementiert. Da häufig auf die Funktionali
 
 Bei der Umsetzung der Repositories wurde auf das Stellvertreter Pattern zurückgegriffen. Da die Implementierung der Repositories flexibel bleiben soll, wird immer nur über das Interface auf ein Repository zugegriffen. Damit ist das Interface ein Stellvertreter für die Implementierung der Repositories.
 
-![img_3.png](img_3.png)
+![img_3.png](img/img_38.png)
