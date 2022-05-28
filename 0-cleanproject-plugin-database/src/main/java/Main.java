@@ -5,7 +5,7 @@ public class Main {
 		OutputLogger.log(
                 "Hallo lieber Student.\n" +
                 "Willkommen bei deinem Notenmanager.\n" +
-                "Wähle eine Aktion aus:");
+                "Waehle eine Aktion aus:");
         new StartAction().execute();
 	}
 }
