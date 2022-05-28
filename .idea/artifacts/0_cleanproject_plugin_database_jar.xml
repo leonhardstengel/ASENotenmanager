@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="0-cleanproject-plugin-database:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/0_cleanproject_plugin_database_jar</output-path>
+    <root id="archive" name="0-cleanproject-plugin-database.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="0-cleanproject-plugin-database" />
+      <element id="module-output" name="1-cleanproject-adapters" />
+      <element id="module-output" name="2-cleanproject-application" />
+      <element id="module-output" name="3-cleanproject-domain" />
+    </root>
+  </artifact>
+</component>

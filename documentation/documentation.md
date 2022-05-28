@@ -41,8 +41,9 @@ Um den Notenschnitt wirklich akkurat berechnen zu können, fügen Nutzer zu jede
 Aus diesen Parametern lassen sich dann die Noten berechnen.
 
 ### Wie startet man die Applikation?
-
+Mit git clone https://github.com/leonhardstengel/ASENotenmanager.git das Repository lokal speichern. JAVA muss auf dem lokalen Computer installiert sein.
 ### Wie testet man die Applikation?
+Mit git clone https://github.com/leonhardstengel/ASENotenmanager.git das Repository lokal speichern. JAVA und Maven müssen auf dem lokalen Computer installiert sein. Mit dem Command mvn test werden dann alle Tests ausgeführt.
 
 ## Kapitel 2: Clean Architecture
 
@@ -121,15 +122,19 @@ Um eine neue Interaktion zu entwickeln müssen nicht bestehende Klassen modifizi
 
 #### Negativ-Beispiel
 
-*ToDo*
+Die Service Klassen sind ein negatives Beispiel für OCP. Um eine Erweiterung bei Services vorzunehmen besteht nicht die Möglichkeit auf eine Abstraktion zurückzugreifen. Es müssen neue Services erstellt werden, was auch Manipulation im aufrufenden Code zur Folge hat.
 
 ### Analyse Liskov-Substitution- (LSP), Interface-Segreggation- (ISP), Dependency-Inversion-Principle (DIP)
 
 #### Positiv-Beispiel
-*ToDo*
+Ein positives Beispiel fürs Dependency-Inversion-Principle sind die Repository Interfaces.
+
+![img_2.png](img/actions.png)
+
+Alle Klassen die das Repository verwenden machen sich von der Abstraktion des Interfaces in der Domain Schicht abhängig. Damit wird sichergestellt, dass Abhängigkeiten stets nur zu tieferen Schichten bestehen.
 
 #### Negativ-Beispiel
-*ToDo*
+Die Services hingegen sind ein negativ Beispiel für DIP. Elemente hängen hier nicht von einer Abstraktion, sondern direkt von der implementierten Klasse ab.
 
 ## Kapitel 4: Weitere Prinzipien
 
