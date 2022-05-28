@@ -1,0 +1,17 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+3-cleanproject-domain,default,InvalidExamTitleException,4,0,0,0,2,0,1,0,1,0
+3-cleanproject-domain,default,InvalidLectureNameException,0,4,0,0,0,2,0,1,0,1
+3-cleanproject-domain,default,Lecture,38,0,0,0,9,0,5,0,5,0
+3-cleanproject-domain,default,Semester,57,0,12,0,13,0,10,0,4,0
+3-cleanproject-domain,default,InvalidGradeException,0,4,0,0,0,2,0,1,0,1
+3-cleanproject-domain,default,Grade,31,27,8,4,5,8,6,4,2,2
+3-cleanproject-domain,default,Weight,58,0,12,0,13,0,10,0,4,0
+3-cleanproject-domain,default,InvalidWeightException,4,0,0,0,2,0,1,0,1,0
+3-cleanproject-domain,default,PersistException,4,0,0,0,2,0,1,0,1,0
+3-cleanproject-domain,default,ExamTitle,52,0,10,0,12,0,8,0,3,0
+3-cleanproject-domain,default,InvalidSemesterException,4,0,0,0,2,0,1,0,1,0
+3-cleanproject-domain,default,asdf,3,0,0,0,1,0,1,0,1,0
+3-cleanproject-domain,default,LectureName,23,39,6,6,4,10,4,5,1,2
+3-cleanproject-domain,default,Ects,57,0,12,0,13,0,10,0,4,0
+3-cleanproject-domain,default,InvalidEctsException,4,0,0,0,2,0,1,0,1,0
+3-cleanproject-domain,default,Exam,46,0,0,0,11,0,6,0,6,0

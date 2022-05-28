@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ExamServiceTest" time="0.116" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ExamServiceTest" time="0.286" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\leonh\Projects\ASE\ASENotenmanager\2-cleanproject-application\target\test-classes;C:\Users\leonh\Projects\ASE\ASENotenmanager\2-cleanproject-application\target\classes;C:\Users\leonh\Projects\ASE\ASENotenmanager\3-cleanproject-domain\target\classes;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.0-M1\junit-jupiter-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.0-M1\junit-jupiter-api-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\leonh\.m2\repository\org\junit\platform\junit-platform-commons\1.9.0-M1\junit-platform-commons-1.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.0-M1\junit-jupiter-params-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.0-M1\junit-jupiter-engine-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\platform\junit-platform-engine\1.9.0-M1\junit-platform-engine-1.9.0-M1.jar;"/>
+    <property name="java.class.path" value="C:\Users\leonh\Projects\ASE\ASENotenmanager\2-cleanproject-application\target\test-classes;C:\Users\leonh\Projects\ASE\ASENotenmanager\2-cleanproject-application\target\classes;C:\Users\leonh\Projects\ASE\ASENotenmanager\3-cleanproject-domain\target\3-cleanproject-domain-0.0.1-SNAPSHOT.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.0-M1\junit-jupiter-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.0-M1\junit-jupiter-api-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\leonh\.m2\repository\org\junit\platform\junit-platform-commons\1.9.0-M1\junit-platform-commons-1.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.0-M1\junit-jupiter-params-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.0-M1\junit-jupiter-engine-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\platform\junit-platform-engine\1.9.0-M1\junit-platform-engine-1.9.0-M1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
     <property name="sun.boot.library.path" value="C:\Users\leonh\.jdks\openjdk-18.0.1.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\leonh\AppData\Local\Temp\surefire14848076703715472522\surefirebooter12146313552961644969.jar C:\Users\leonh\AppData\Local\Temp\surefire14848076703715472522 2022-05-28T18-19-28_890-jvmRun1 surefire7849270802446988867tmp surefire_115531355607094154482tmp"/>
+    <property name="sun.java.command" value="C:\Users\leonh\AppData\Local\Temp\surefire5228431591447217747\surefirebooter3114411205496967010.jar C:\Users\leonh\AppData\Local\Temp\surefire5228431591447217747 2022-05-28T19-14-08_603-jvmRun1 surefire8540550016092352872tmp surefire_11344728368286958473tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\leonh\Projects\ASE\ASENotenmanager\2-cleanproject-application\target\test-classes;C:\Users\leonh\Projects\ASE\ASENotenmanager\2-cleanproject-application\target\classes;C:\Users\leonh\Projects\ASE\ASENotenmanager\3-cleanproject-domain\target\classes;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.0-M1\junit-jupiter-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.0-M1\junit-jupiter-api-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\leonh\.m2\repository\org\junit\platform\junit-platform-commons\1.9.0-M1\junit-platform-commons-1.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.0-M1\junit-jupiter-params-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.0-M1\junit-jupiter-engine-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\platform\junit-platform-engine\1.9.0-M1\junit-platform-engine-1.9.0-M1.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\leonh\Projects\ASE\ASENotenmanager\2-cleanproject-application\target\test-classes;C:\Users\leonh\Projects\ASE\ASENotenmanager\2-cleanproject-application\target\classes;C:\Users\leonh\Projects\ASE\ASENotenmanager\3-cleanproject-domain\target\3-cleanproject-domain-0.0.1-SNAPSHOT.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.0-M1\junit-jupiter-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.0-M1\junit-jupiter-api-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\leonh\.m2\repository\org\junit\platform\junit-platform-commons\1.9.0-M1\junit-platform-commons-1.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.0-M1\junit-jupiter-params-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.0-M1\junit-jupiter-engine-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\platform\junit-platform-engine\1.9.0-M1\junit-platform-engine-1.9.0-M1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\leonh"/>
     <property name="user.language" value="de"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\leonh\AppData\Local\Temp\surefire14848076703715472522\surefirebooter12146313552961644969.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\leonh\AppData\Local\Temp\surefire5228431591447217747\surefirebooter3114411205496967010.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="18.0.1.1+2-6"/>
@@ -56,7 +56,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="testInvalidCreate" classname="ExamServiceTest" time="0.073"/>
-  <testcase name="testValidCreate" classname="ExamServiceTest" time="0.003"/>
-  <testcase name="testGetByLecture" classname="ExamServiceTest" time="0.005"/>
+  <testcase name="testInvalidCreate" classname="ExamServiceTest" time="0.166"/>
+  <testcase name="testValidCreate" classname="ExamServiceTest" time="0.005"/>
+  <testcase name="testGetByLecture" classname="ExamServiceTest" time="0.017"/>
 </testsuite>

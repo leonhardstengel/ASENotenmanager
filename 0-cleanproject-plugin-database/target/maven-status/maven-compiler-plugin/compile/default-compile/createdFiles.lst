@@ -1,0 +1,12 @@
+ExamRepository.class
+Main.class
+IO\CommandLineReader.class
+IO\CSVHandler.class
+CreateExamAction.class
+ActionInterface.class
+ListExamsAction.class
+StartAction.class
+CalculateGradesAction.class
+CreateLectureAction.class
+LectureRepository.class
+ListLecturesAction.class

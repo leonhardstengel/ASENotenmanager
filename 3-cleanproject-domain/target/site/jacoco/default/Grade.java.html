@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="de"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Grade.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">3-cleanproject-domain</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Grade.java</span></div><h1>Grade.java</h1><pre class="source lang-java linenums">public class Grade {
+	private final double value;
+	
+<span class="fc" id="L4">	Grade(double grade) throws InvalidGradeException {</span>
+<span class="fc bfc" id="L5" title="All 2 branches covered.">		if(grade &lt; 1) {</span>
+<span class="fc" id="L6">			throw new InvalidGradeException(&quot;Grade too small&quot;);</span>
+		}
+<span class="fc bfc" id="L8" title="All 2 branches covered.">		if(grade &gt; 6) {</span>
+<span class="fc" id="L9">			throw new InvalidGradeException(&quot;Grade too big&quot;);</span>
+		}
+<span class="fc" id="L11">		this.value = grade;</span>
+<span class="fc" id="L12">	}</span>
+
+	public double getValue() {
+<span class="fc" id="L15">		return value;</span>
+	}
+
+	@Override
+	public boolean equals(Object o) {
+<span class="nc bnc" id="L20" title="All 2 branches missed.">		if (this == o) return true;</span>
+<span class="nc bnc" id="L21" title="All 4 branches missed.">		if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="nc" id="L22">		Grade grade = (Grade) o;</span>
+<span class="nc bnc" id="L23" title="All 2 branches missed.">		return Double.compare(grade.value, value) == 0;</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="nc" id="L28">		return &quot;&quot;+this.value;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -1,0 +1,6 @@
+GradeService.class
+NoGradesException.class
+LectureService.class
+LectureNotFoundException.class
+ExamService.class
+ExamNotFoundException.class

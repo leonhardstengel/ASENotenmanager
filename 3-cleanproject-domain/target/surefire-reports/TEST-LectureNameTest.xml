@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
     <property name="sun.boot.library.path" value="C:\Users\leonh\.jdks\openjdk-18.0.1.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\leonh\AppData\Local\Temp\surefire10497876958791651152\surefirebooter11308922568912342146.jar C:\Users\leonh\AppData\Local\Temp\surefire10497876958791651152 2022-05-28T18-19-28_890-jvmRun1 surefire4098572320785957199tmp surefire_016753579795975352904tmp"/>
+    <property name="sun.java.command" value="C:\Users\leonh\AppData\Local\Temp\surefire12624017536833982776\surefirebooter13869663872434651001.jar C:\Users\leonh\AppData\Local\Temp\surefire12624017536833982776 2022-05-28T19-14-08_603-jvmRun1 surefire17959801984914758982tmp surefire_02093184786917694883tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\leonh\Projects\ASE\ASENotenmanager\3-cleanproject-domain\target\test-classes;C:\Users\leonh\Projects\ASE\ASENotenmanager\3-cleanproject-domain\target\classes;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.0-M1\junit-jupiter-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.0-M1\junit-jupiter-api-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\leonh\.m2\repository\org\junit\platform\junit-platform-commons\1.9.0-M1\junit-platform-commons-1.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.0-M1\junit-jupiter-params-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.0-M1\junit-jupiter-engine-5.9.0-M1.jar;C:\Users\leonh\.m2\repository\org\junit\platform\junit-platform-engine\1.9.0-M1\junit-platform-engine-1.9.0-M1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\leonh\AppData\Local\Temp\surefire10497876958791651152\surefirebooter11308922568912342146.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\leonh\AppData\Local\Temp\surefire12624017536833982776\surefirebooter13869663872434651001.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="18.0.1.1+2-6"/>
@@ -58,5 +58,5 @@
   </properties>
   <testcase name="testInvalidValues" classname="LectureNameTest" time="0"/>
   <testcase name="testGetter" classname="LectureNameTest" time="0"/>
-  <testcase name="testValidValues" classname="LectureNameTest" time="0.001"/>
+  <testcase name="testValidValues" classname="LectureNameTest" time="0"/>
 </testsuite>

@@ -1,5 +1,4 @@
 import IO.CommandLineReader;
-import IO.OutputLogger;
 
 import java.util.HashMap;
 
@@ -18,7 +17,7 @@ public class StartAction implements ActionInterface {
 	public void execute() {
 		int response;
         do{
-            OutputLogger.log(
+            System.out.println(
                 "1: List lectures \n" +
                 "2: Create lecture \n" +
                 "3: List exams \n" +
@@ -32,10 +31,10 @@ public class StartAction implements ActionInterface {
                 	break;
                 }
                 actions.get(response).execute();
-                OutputLogger.log("\nEnter to continue");
+                System.out.println("\nEnter to continue");
                 CommandLineReader.readLine();
             }catch (Exception e){
-                OutputLogger.log("\n Invalid input");
+                System.out.println("\n Invalid input");
             }
         }while(true);
 	}
