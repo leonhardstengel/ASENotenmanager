@@ -14,19 +14,23 @@ public class GradeService {
 		Lecture lecture = this.lectureRepository.getByName(lectureName);
 		ArrayList<Exam> exams = examRepository.getByLecture(lecture);
 		if(exams.size() > 0) {
-			double tmpGrade = 0;
-			double sumWeight = 0;
-			for(Exam exam : exams) {
-				sumWeight += exam.getWeight().getValue();
-				tmpGrade += exam.getWeight().getValue() * exam.getGrade().getValue();
-			}
-			double grade = tmpGrade/sumWeight;
-			return new Grade(grade);
+			return getGrade(exams);
 		} else {
 			throw new NoGradesException();
 		}
 	}
-	
+
+	private Grade getGrade(ArrayList<Exam> exams) throws InvalidGradeException {
+		double tmpGrade = 0;
+		double sumWeight = 0;
+		for(Exam exam : exams) {
+			sumWeight += exam.getWeight().getValue();
+			tmpGrade += exam.getWeight().getValue() * exam.getGrade().getValue();
+		}
+		double grade = tmpGrade/sumWeight;
+		return new Grade(grade);
+	}
+
 	public Grade calculateGeneralGrade() throws InvalidGradeException, NoGradesException {
 		ArrayList<Exam> exams = examRepository.getAll();
 		if(exams.size() > 0) {
