@@ -154,7 +154,18 @@ Eine Hohe Koh채sion begrenzt die Komplexit채t des Gesamtsystems, indem Klassen �
 
 Um die Koh채sion in der Klasse hoch zu halten, werden die Eigenheiten vom Namen, Semester und ECTS-Punkten in eigene Klassen ausgelagert. So bleibt die Klasse Lecture simpel und 체berschaubar.
 ### Don't Repeat Yourself (DRY)
-*ToDo*
+Sowohl in LectureRepository, als auch in ExamRepository wurde in den getAll Methoden die entsprechende CSV Datei eingelesen, die erste Headerzeile entfernt und dann die einzelnen Zeileneintr채ge weitergegeben. Dieser Codeabschnitt war in beiden F채llen identisch, wesshalb er in eine CSVHelper Klasse ausgelagert wurde.
+
+![img.png](img.png)
+
+Jetzt m체ssen Methoden zum Weiterverarbeiten von den CSV Dateien nur noch diese eine Methode aufrufen und erhalten die relevanten Zeilen.
+
+![img_1.png](img_1.png)
+
+Wenn sich an der CSV Datei oder am Einlesevorgang etwas 채ndert, kann dies nun an einer zentralen Stelle umgesetzt werden.
+
+[Link zu Commit](https://github.com/leonhardstengel/ASENotenmanager/commit/5c1b9fbee3d1e87147b97174a0e4e87aed241451)
+
 
 ## Kapitel 5: Unit tests
 
