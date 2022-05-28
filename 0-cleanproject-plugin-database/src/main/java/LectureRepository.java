@@ -62,18 +62,14 @@ public class LectureRepository implements LectureRepositoryInterface {
 	@Override
 	public ArrayList<Lecture> getAll() {
 		ArrayList<Lecture> lectures = new ArrayList<Lecture>();
-		try{
-			LinkedList<String> rows = csvHandler.read(this.LECTURES_FILEPATH, "\r\n");
-			rows.remove(0);
-			for(String row : rows){
-				String[] rowdata = row.split(";");
-			    lectures.add(getLectureFromRow(row));
-		    }
-			return lectures;
-		}catch (Exception e){
-		    System.out.println(e);
+		ArrayList<String> rows = CSVHelper.readRows(this.LECTURES_FILEPATH);
+		if(rows == null) {
+			return null;
 		}
-		return null;
+		for(String row: rows) {
+			lectures.add(getLectureFromRow(row));
+		}
+		return lectures;
 	}
 	
 }

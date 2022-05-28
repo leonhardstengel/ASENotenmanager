@@ -56,18 +56,14 @@ public class ExamRepository implements ExamRepositoryInterface {
 	@Override
 	public ArrayList<Exam> getAll() {
 		ArrayList<Exam> exams = new ArrayList<Exam>();
-		try {
-			LinkedList<String> rows = csvHandler.read(this.EXAMS_FILEPATH, "\r\n");
-			rows.remove(0);
-			for (String row : rows) {
-				String[] rowdata = row.split(";");
-				exams.add(getExamFromRow(row));
-			}
-			return exams;
-		} catch (Exception e) {
-			System.out.println(e);
+		ArrayList<String> rows = CSVHelper.readRows(this.EXAMS_FILEPATH);
+		if(rows == null) {
+			return null;
 		}
-		return null;
+		for(String row: rows) {
+			exams.add(getExamFromRow(row));
+		}
+		return exams;
 	}
 
 }
