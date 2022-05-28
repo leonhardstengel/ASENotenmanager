@@ -221,7 +221,8 @@ Nicht Professional hingegen sind die Variablenbezeichnungen in der BeforeEach de
 ![img_12.png](img/img_12.png)
 
 ### Code Coverage
-*ToDo*
+Die Code Coverage wurde mittels JUint ermittelt. Die Testergebnisse wurden im report Directory gespeichert.
+![img_2.png](img_2.png)
 
 ### Fakes und Mocks
 

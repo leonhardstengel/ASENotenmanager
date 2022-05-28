@@ -1,0 +1,133 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Lecture</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">&lt;empty package name&gt;</a>
+</div>
+
+<h1>Coverage Summary for Class: Lecture (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Lecture</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    80%
+  </span>
+  <span class="absValue">
+    (4/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    87,5%
+  </span>
+  <span class="absValue">
+    (7/8)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;public class Lecture {
+<i class="no-highlight">2</i>&nbsp;	private LectureName name;
+<i class="no-highlight">3</i>&nbsp;	private Ects ects;
+<i class="no-highlight">4</i>&nbsp;	private Semester semester;
+<i class="no-highlight">5</i>&nbsp;
+<b class="fc"><i class="no-highlight">6</i>&nbsp;	Lecture(String name, int ects, int semester) throws InvalidLectureNameException, InvalidSemesterException, InvalidEctsException {</b>
+<b class="fc"><i class="no-highlight">7</i>&nbsp;		this.name = new LectureName(name);</b>
+<b class="fc"><i class="no-highlight">8</i>&nbsp;		this.ects = new Ects(ects);</b>
+<b class="fc"><i class="no-highlight">9</i>&nbsp;		this.semester = new Semester(semester);</b>
+<i class="no-highlight">10</i>&nbsp;	}
+<i class="no-highlight">11</i>&nbsp;
+<i class="no-highlight">12</i>&nbsp;	public LectureName getName() {
+<b class="fc"><i class="no-highlight">13</i>&nbsp;		return name;</b>
+<i class="no-highlight">14</i>&nbsp;	}
+<i class="no-highlight">15</i>&nbsp;
+<i class="no-highlight">16</i>&nbsp;	public Ects getEcts() {
+<b class="fc"><i class="no-highlight">17</i>&nbsp;		return ects;</b>
+<i class="no-highlight">18</i>&nbsp;	}
+<i class="no-highlight">19</i>&nbsp;
+<i class="no-highlight">20</i>&nbsp;	public Semester getSemester() {
+<b class="fc"><i class="no-highlight">21</i>&nbsp;		return semester;</b>
+<i class="no-highlight">22</i>&nbsp;	}
+<i class="no-highlight">23</i>&nbsp;
+<i class="no-highlight">24</i>&nbsp;	@Override
+<i class="no-highlight">25</i>&nbsp;	public String toString() {
+<b class="nc"><i class="no-highlight">26</i>&nbsp;		return &quot;&quot;+this.name + &quot;: &quot; + ects + &quot;ECTS, Semester &quot; + semester;</b>
+<i class="no-highlight">27</i>&nbsp;	}
+<i class="no-highlight">28</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-05-28 20:40</div>
+</div>
+</body>
+</html>
