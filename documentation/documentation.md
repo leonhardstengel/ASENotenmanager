@@ -298,3 +298,9 @@ Aggregates sind in diesem Projekt nicht notwendig oder sinnvoll.
 Der CSVHandler wurde als Singleton implementiert. Da häufig auf die Funktionalitäten dieser Klasse in verschiedenen Teilen des Programms zugegriffen werden muss, ist es umständlich jedesmal ein neues Objekt zur Verarbeitung von CSV Dateien zu erstellen. Da sich im Lauf des Programms die Logik, wie CSV Dateien verarbeitet werden, nicht verändert, wird nur zur ersten Verwendung eine Instanz erzeugt, die dann immer weiter verwendet werden kann.
 
 ![img_3.png](img/img_3.png)
+
+### Entwurfsmuster Stellvertreter
+
+Bei der Umsetzung der Repositories wurde auf das Stellvertreter Pattern zurückgegriffen. Da die Implementierung der Repositories flexibel bleiben soll, wird immer nur über das Interface auf ein Repository zugegriffen. Damit ist das Interface ein Stellvertreter für die Implementierung der Repositories.
+
+![img_3.png](img_3.png)
