@@ -278,10 +278,13 @@ Aggregates sind in diesem Projekt nicht notwendig oder sinnvoll.
 ### Code Smells
 
 #### Code Smell 1: <name>
-*ToDo*
+![img_5.png](img_5.png)
 
 #### Code Smell 2: <name>
-*ToDo*
+
+![img_4.png](img_4.png)
+
+[Link zu Commit](https://github.com/leonhardstengel/ASENotenmanager/commit/64ac5f47001482459d9855973973296030a880b9)
 
 ### Refactorings
 
