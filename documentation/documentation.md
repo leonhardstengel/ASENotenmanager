@@ -286,10 +286,12 @@ Aggregates sind in diesem Projekt nicht notwendig oder sinnvoll.
 ### Refactorings
 
 #### Refactoring 1
-*ToDo*
+Die Methode calculateGradeForLecture in GradeService ist relativ lang und mit der Notenberechnung relativ komplex. Desshalb ist an dieser Stelle ein Refactoring Extract Method sinvoll. Damit wird die Berechnung der Note von der Validierung der eingegebenen Lecutre getrennt und erhöht damit die Lesbarkeit und Wartbarkeit der Methode.
+
+[Link zu Commit](https://github.com/leonhardstengel/ASENotenmanager/commit/eb9649ff5b27762fad1a3e33b71b90e955748d59)
 
 #### Refactoring 2
-*ToDo*
+
 
 ## Kapitel 8: Entwurfsmuster
 
