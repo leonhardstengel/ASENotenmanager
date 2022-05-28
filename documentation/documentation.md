@@ -179,8 +179,8 @@ Die folgende Tabelle umfasst eine Auswahl der Unit-Tests der Notenmanager-Applik
 ### ATRIP - Automatic
 Unter Nutzung von JUnit und Maven können alle Tests automatisch ausgeführt werden. Dafür wird der Command mvn test auf das Root-Directory ausgeführt.
 
-![img_6.png](img_6.png)
-![img_5.png](img_5.png)
+![img_6.png](img/img_6.png)
+![img_5.png](img/img_5.png)
 
 Die Konsole zeigt dann, ob die Test erfolgreich durchlaufen wurden oder ob Tests fehlgeschlagen sind.
 
@@ -190,24 +190,24 @@ Thorough besagt, dass Tests alle kritischen Stellen abdecken sollen. Was dabei N
 #### Positiv-Beispiel
 Ein positives Beispiel ist der Test testInvalidValues im LectureNameTest. Dieser deckt alle möglichen kritischen Eingaben für LectureName ab und überprüft, ob diese auch korrekt aufgefangen werden.
 
-![img_8.png](img_8.png)
+![img_8.png](img/img_8.png)
 
 #### Negativ-Beispiel
 Ein negatives Beispiel ist der testGetter in LectureNameTest. Getter Tests können allgemein als überflüssig erachtet werden, da die Methode lediglich das Value-Attribut zurückgibt. Entsprechend wird hier eine eher unkritische Stelle Code abgedeckt.
 
-![img_9.png](img_9.png)
+![img_9.png](img/img_9.png)
 
 ### ATRIP - Professional
 
 #### Positiv-Beispiel
 Ein positives Beispiel für Professional in den Tests ist die Verwendung von BeforeEach in der Test Klasse ExamServiceTest. Nach dem Motto "Dont Repeat Yourself" wird der Code in BeforeEach vor jeder Testdurchführung ausgeführt. Damit müssen die Anweisungen darin nicht in jedem Test einzeln aufgeschrieben werden.
 
-![img_11.png](img_11.png)
+![img_11.png](img/img_11.png)
 
 #### Negativ-Beispiel
 Nicht Professional hingegen sind die Variablenbezeichnungen in der BeforeEach der LectureServiceTest Klasse. Die Variablennamen a, b und c sind nicht selbsterklärend und damit nicht optimal.
 
-![img_12.png](img_12.png)
+![img_12.png](img/img_12.png)
 
 ### Code Coverage
 *ToDo*
@@ -216,7 +216,7 @@ Nicht Professional hingegen sind die Variablenbezeichnungen in der BeforeEach de
 
 Um die Services LectureService und ExamService testen zu können, müssen Implementierungen für die zugehörigen Repositories erstellt werden.
 
-![img_4.png](img_4.png)
+![img_4.png](img/img_4.png)
 
 Dafür wurden MockExamRepository und MockLectureRepository auf Basis der zugehörigen Interfaces implementiert. Diese Implementierung simulieren ein Repository, indem die Objekte mittels einer ArrayList verwaltet werden. Die save Methode hängt das eingehende Objekt an die ArrayList an. Die Methoden zum zurückgeben von Exams bzw. Lectures wurden ebenfalls entsprechend implementiert. Das ist wichtig, weil in den ServicesTests nur die Funktionsweise der Serviceimplementierungen getestet werden sollen, nicht die Implementierungen der Repositories.
 
@@ -237,13 +237,13 @@ Dafür wurden MockExamRepository und MockLectureRepository auf Basis der zugehö
 
 Eine Entity der Anwendung ist Lecture. Eine Lecture lässt sich über ihren eindeutigen Namen name indentifizieren. Entsprechend können keine zwei Lectures mit dem selben Namen existieren. Zwei Lectures mit gleichen Attributen außer name, sind zwei unterschiedliche Entities.
 
-![img.png](img.png)
+![img.png](img/img13.png)
 
 ### Value Objects
 
 Im Gegensatz zu Entities besitzen Value Objects keinen eindeutigen Indentifikator. Sie sind nicht veränderbar und sollen einen Wert darstellen. Ein Value Object in diesem Projekt ist die Ects Klasse.
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_14.png)
 
 Die Klasse definiert ECTS Punkte als Datentyp. Ohne diese Klasse würden ECTS Punkte als Integer dargestellt werden. Als Value Objekt kann jedoch bei der Erstellung eines Objekts automatisch eine Validierung im Konstruktor durchgeführt werden. Ects Punkte müssen größer als Null sein und dürfen 210 nicht überschreiten.
 Das Value Object überschreibt außerdem die zwei Methoden toString und equals.
@@ -254,7 +254,7 @@ Zwei Objekte mit der selben Zahl an Ects Punkten sind gleich zu behandeln. Dessh
 
 Ein Repository verwaltet die Speicherung und Verwendung von Objekten. Im Projekt wurden zwei verschiedene Repositories implementiert. Eines davon ist LectureRepository.
 
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
 
 Das LectureRepository implementiert das Interface LectureRepositoryInterface mit den Methoden save (zur Speicherung neuer Lectures), getByName (Suche nach einer Lecture über den eindeutigen Namen) und getAll (gibt alle Einträge zurück).
 
@@ -285,4 +285,4 @@ Aggregates sind in diesem Projekt nicht notwendig oder sinnvoll.
 
 Der CSVHandler wurde als Singleton implementiert. Da häufig auf die Funktionalitäten dieser Klasse in verschiedenen Teilen des Programms zugegriffen werden muss, ist es umständlich jedesmal ein neues Objekt zur Verarbeitung von CSV Dateien zu erstellen. Da sich im Lauf des Programms die Logik, wie CSV Dateien verarbeitet werden, nicht verändert, wird nur zur ersten Verwendung eine Instanz erzeugt, die dann immer weiter verwendet werden kann.
 
-![img_3.png](img_3.png)
+![img_3.png](img/img_3.png)
