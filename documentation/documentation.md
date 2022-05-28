@@ -277,10 +277,17 @@ Aggregates sind in diesem Projekt nicht notwendig oder sinnvoll.
 
 ### Code Smells
 
-#### Code Smell 1: <name>
+#### Code Smell 1:
+
+Die Verwendung von isEmpty statt size kommt mit einer besseren Lesbarkeit und einer höheren Performance daher.
+
 ![img_5.png](img_5.png)
 
-#### Code Smell 2: <name>
+[Link zu Commit](https://github.com/leonhardstengel/ASENotenmanager/commit/48bc06f87b21c8c809394771eafe69c25d8c6639)
+
+#### Code Smell 2:
+
+Zu Beginn des Projekts ist eine Klasse entstanden, die nie Implementiert oder Verwendet wurde. Entsprechend handelt es sich hierbei um Dead Code.
 
 ![img_4.png](img_4.png)
 
