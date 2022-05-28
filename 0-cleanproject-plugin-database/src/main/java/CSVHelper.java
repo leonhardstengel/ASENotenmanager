@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class CSVHelper {
-    public static ArrayList<String> readRows(String file) {
+    public static ArrayList<String> getRowsFromCSVFile(String file) {
         ArrayList<String> rowsOut = new ArrayList<String>();
         try {
             LinkedList<String> rows = CSVHandler.getInstance().read(file, "\r\n");

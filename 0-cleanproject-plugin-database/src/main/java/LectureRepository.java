@@ -62,7 +62,7 @@ public class LectureRepository implements LectureRepositoryInterface {
 	@Override
 	public ArrayList<Lecture> getAll() {
 		ArrayList<Lecture> lectures = new ArrayList<Lecture>();
-		ArrayList<String> rows = CSVHelper.readRows(this.LECTURES_FILEPATH);
+		ArrayList<String> rows = CSVHelper.getRowsFromCSVFile(this.LECTURES_FILEPATH);
 		if(rows == null) {
 			return null;
 		}

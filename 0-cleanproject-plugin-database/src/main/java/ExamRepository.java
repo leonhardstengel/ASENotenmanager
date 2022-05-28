@@ -56,7 +56,7 @@ public class ExamRepository implements ExamRepositoryInterface {
 	@Override
 	public ArrayList<Exam> getAll() {
 		ArrayList<Exam> exams = new ArrayList<Exam>();
-		ArrayList<String> rows = CSVHelper.readRows(this.EXAMS_FILEPATH);
+		ArrayList<String> rows = CSVHelper.getRowsFromCSVFile(this.EXAMS_FILEPATH);
 		if(rows == null) {
 			return null;
 		}
