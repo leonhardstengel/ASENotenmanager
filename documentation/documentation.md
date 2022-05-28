@@ -291,7 +291,8 @@ Die Methode calculateGradeForLecture in GradeService ist relativ lang und mit de
 [Link zu Commit](https://github.com/leonhardstengel/ASENotenmanager/commit/eb9649ff5b27762fad1a3e33b71b90e955748d59)
 
 #### Refactoring 2
-
+Das zweite Refactoring betrifft die Umbennung der Methode readRows. Diese ist aus der Dont Repeat Yourself Aufgabe entstande. Problem dabei ist, dass der Name nicht sehr Aussagekräftig ist. Desshalb wurde dieser zu getRowsFromCSVFile geändert. Damit wird jetzt klar, dass es sich bei dieser Methode um das Lesen und Verarbeiten der Zeilen einer CSV Datei handelt.
+[Link zu Commit](https://github.com/leonhardstengel/ASENotenmanager/commit/424ef3740ede032a4d27ac326a240fabbe7bd86a)
 
 ## Kapitel 8: Entwurfsmuster
 
