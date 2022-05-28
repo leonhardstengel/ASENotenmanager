@@ -9,7 +9,6 @@ Weight.class
 Lecture.class
 Exam.class
 PersistException.class
-asdf.class
 Semester.class
 Ects.class
 InvalidExamTitleException.class

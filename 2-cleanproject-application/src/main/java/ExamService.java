@@ -12,7 +12,7 @@ public class ExamService {
 	
 	public Exam create(String title, double weight, double grade, LectureName lecture) throws InvalidGradeException, InvalidWeightException, InvalidExamTitleException, PersistException, InvalidLectureNameException, LectureNotFoundException {
 		Lecture l = this.lectureRepository.getByName(lecture);
-		if(l== null) {
+		if(l == null) {
 			throw new LectureNotFoundException(lecture);
 		}
 		Exam e = new Exam(title, weight, grade, lecture);

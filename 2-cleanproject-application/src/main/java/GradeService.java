@@ -10,13 +10,16 @@ public class GradeService {
 		this.lectureRepository = lectureRepository;
 	}
 	
-	public Grade calculateGradeForLecture(LectureName lectureName) throws InvalidGradeException, NoGradesException {
+	public Grade calculateGradeForLecture(LectureName lectureName) throws InvalidGradeException, NoGradesException, LectureNotFoundException, ExamNotFoundException {
 		Lecture lecture = this.lectureRepository.getByName(lectureName);
+		if(lecture == null) {
+			throw new LectureNotFoundException(lectureName);
+		}
 		ArrayList<Exam> exams = examRepository.getByLecture(lecture);
 		if(!exams.isEmpty()) {
 			return getGrade(exams);
 		} else {
-			throw new NoGradesException();
+			throw new ExamNotFoundException();
 		}
 	}
 
