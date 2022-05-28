@@ -13,7 +13,7 @@ public class GradeService {
 	public Grade calculateGradeForLecture(LectureName lectureName) throws InvalidGradeException, NoGradesException {
 		Lecture lecture = this.lectureRepository.getByName(lectureName);
 		ArrayList<Exam> exams = examRepository.getByLecture(lecture);
-		if(exams.size() > 0) {
+		if(!exams.isEmpty()) {
 			return getGrade(exams);
 		} else {
 			throw new NoGradesException();
@@ -33,7 +33,7 @@ public class GradeService {
 
 	public Grade calculateGeneralGrade() throws InvalidGradeException, NoGradesException {
 		ArrayList<Exam> exams = examRepository.getAll();
-		if(exams.size() > 0) {
+		if(!exams.isEmpty()) {
 			int sumEcts = 0;
 			double tmpGrade = 0;
 			for(Exam exam : exams) {
